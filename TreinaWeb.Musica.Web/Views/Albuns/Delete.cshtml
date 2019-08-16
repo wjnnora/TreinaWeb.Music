@@ -1,0 +1,63 @@
+﻿@model TreinaWeb.Musica.Dominio.Album
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>Tem certeza que deseja deletar este album?</h3>
+<div>
+    <h4>Album</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Obeservacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obeservacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>
+                Deletar
+            </button>            
+        </div>
+        <br />
+        <br />
+        <div class="form-actions no-color">
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
