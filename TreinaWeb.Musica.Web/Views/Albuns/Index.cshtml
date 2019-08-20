@@ -44,20 +44,20 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                <button class="btn btn-success" value="Editar">
-                    <span class="glyphicon glyphicon-edit"></span>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
-                </button> 
-                <button class="btn btn-warning" value="Detalhes">
-                    <span class="glyphicon glyphicon-eye-open"></span>
-                    @Html.ActionLink("Detalhes", "Details", new { id = item.Id })
-                </button>
-                <button class="btn btn-danger" value="Deletar">
-                    <span class="glyphicon glyphicon-trash"></span>
-                    @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
-                </button>
-                
-                
+                <div class="form-group">
+                    <button class="btn btn-success" value="Editar">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                    </button>
+                    <button class="btn btn-warning" value="Detalhes">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.Id })
+                    </button>
+                    <button class="btn btn-danger" value="Deletar">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                    </button>
+                </div>
             </td>
         </tr>
     }
