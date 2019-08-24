@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TreinaWeb.Musica.Dominio.Album>
+﻿@model IEnumerable<TreinaWeb.Musica.Web.ViewModels.Album.AlbumExibicaoIndexViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -47,7 +47,7 @@
                 <div class="form-group">
                     <button class="btn btn-success" value="Editar">
                         <span class="glyphicon glyphicon-edit"></span>
-                        @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id})
                     </button>
                     <button class="btn btn-warning" value="Detalhes">
                         <span class="glyphicon glyphicon-eye-open"></span>
