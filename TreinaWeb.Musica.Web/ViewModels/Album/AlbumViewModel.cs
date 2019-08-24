@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using TreinaWeb.Musica.Web.Annotations;
 
 namespace TreinaWeb.Musica.Web.ViewModels.Album
 {
@@ -13,7 +14,7 @@ namespace TreinaWeb.Musica.Web.ViewModels.Album
 
         [Display(Name = "Nome do Album")]
         [Required(ErrorMessage = "O nome é obrigatório")]
-        [MaxLength(100, ErrorMessage = "O nome do album pode ter no máximo 100 caracteres") ]
+        [MaxLength(100, ErrorMessage = "O nome do album pode ter no máximo 100 caracteres")]
         public string Nome { get; set; }
 
         [Display(Name = "Ano do Album")]
@@ -28,6 +29,7 @@ namespace TreinaWeb.Musica.Web.ViewModels.Album
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "O E-mail é obrigatório")]
         [MaxLength(50, ErrorMessage = "O E-mail pode ter no máximo 50 caracteres")]
+        [Email(ErrorMessage = "O e-mail precisa ser Hotmail")]
         public string Email { get; set; }
     }
 }
