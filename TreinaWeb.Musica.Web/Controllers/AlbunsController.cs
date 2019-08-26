@@ -17,7 +17,7 @@ namespace TreinaWeb.Musica.Web.Controllers
 {
     public class AlbunsController : Controller
     {
-        private IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new MusicasDbContext());
+        private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new MusicasDbContext());
 
         // GET: Albuns
         public ActionResult Index()

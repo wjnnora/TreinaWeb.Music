@@ -8,7 +8,7 @@ namespace TreinaWeb.Repositorios.Comum.Entity
 {
     public class RepositorioGenericoEntity<TEntidade, TChave> : IRepositorioGenerico<TEntidade, TChave> where TEntidade : class
     {
-        private DbContext _contexto;
+        private readonly DbContext _contexto;
 
         public RepositorioGenericoEntity(DbContext dbContext)
         {
