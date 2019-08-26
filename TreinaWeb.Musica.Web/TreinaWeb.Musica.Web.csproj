@@ -214,9 +214,21 @@
       <Project>{656cc981-e7dc-4769-b35c-3e6088cb2f92}</Project>
       <Name>TreinaWeb.Musica.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TreinaWeb.Musica.Repositorios.Entity\TreinaWeb.Musica.Repositorios.Entity.csproj">
+      <Project>{f5d1f709-8b2a-48f5-854d-93f58778039c}</Project>
+      <Name>TreinaWeb.Musica.Repositorios.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TreinaWeb.Musica.Servicos.Entity\TreinaWeb.Musica.Servicos.Entity.csproj">
       <Project>{7878eac8-bad4-4174-b81e-4949512b2c7e}</Project>
       <Name>TreinaWeb.Musica.Servicos.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreinaWeb.Repositorios.Comum.Entity\TreinaWeb.Repositorios.Comum.Entity.csproj">
+      <Project>{82ec5856-008d-4e5b-a259-c3baaa728046}</Project>
+      <Name>TreinaWeb.Repositorios.Comum.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreinaWeb.Repositorios.Comum\TreinaWeb.Repositorios.Comum.csproj">
+      <Project>{010ff481-1488-44f9-bf03-9507d757139f}</Project>
+      <Name>TreinaWeb.Repositorios.Comum</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

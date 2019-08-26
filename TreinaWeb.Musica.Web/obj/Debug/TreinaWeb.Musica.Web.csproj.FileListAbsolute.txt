@@ -78,3 +78,10 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\Trei
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.csproj.CopyComplete
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.pdb
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Musica.Repositorios.Entity.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.Entity.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Musica.Repositorios.Entity.pdb
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.Entity.pdb
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.Entity.dll.config
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.pdb

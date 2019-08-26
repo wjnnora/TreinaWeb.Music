@@ -15,6 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreinaWeb.Musica.Servicos.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreinaWeb.Comum", "TreinaWeb.Comum\TreinaWeb.Comum.csproj", "{816BB9E7-0F21-4D0D-894D-9E646CF443E0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositorios", "Repositorios", "{A835BDCD-6325-4992-A03F-9675DB639F9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreinaWeb.Musica.Repositorios.Entity", "TreinaWeb.Musica.Repositorios.Entity\TreinaWeb.Musica.Repositorios.Entity.csproj", "{F5D1F709-8B2A-48F5-854D-93F58778039C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreinaWeb.Repositorios.Comum", "TreinaWeb.Repositorios.Comum\TreinaWeb.Repositorios.Comum.csproj", "{010FF481-1488-44F9-BF03-9507D757139F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreinaWeb.Repositorios.Comum.Entity", "TreinaWeb.Repositorios.Comum.Entity\TreinaWeb.Repositorios.Comum.Entity.csproj", "{82EC5856-008D-4E5B-A259-C3BAAA728046}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +45,18 @@ Global
 		{816BB9E7-0F21-4D0D-894D-9E646CF443E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{816BB9E7-0F21-4D0D-894D-9E646CF443E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{816BB9E7-0F21-4D0D-894D-9E646CF443E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D1F709-8B2A-48F5-854D-93F58778039C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D1F709-8B2A-48F5-854D-93F58778039C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D1F709-8B2A-48F5-854D-93F58778039C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D1F709-8B2A-48F5-854D-93F58778039C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{010FF481-1488-44F9-BF03-9507D757139F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010FF481-1488-44F9-BF03-9507D757139F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010FF481-1488-44F9-BF03-9507D757139F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010FF481-1488-44F9-BF03-9507D757139F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EC5856-008D-4E5B-A259-C3BAAA728046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EC5856-008D-4E5B-A259-C3BAAA728046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EC5856-008D-4E5B-A259-C3BAAA728046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EC5856-008D-4E5B-A259-C3BAAA728046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +65,9 @@ Global
 		{656CC981-E7DC-4769-B35C-3E6088CB2F92} = {0E84074E-E2DE-4C5B-B00C-E3A17CF7B0EE}
 		{7878EAC8-BAD4-4174-B81E-4949512B2C7E} = {D117ACE5-F050-4BDD-A3FE-A51A95A8C472}
 		{816BB9E7-0F21-4D0D-894D-9E646CF443E0} = {D117ACE5-F050-4BDD-A3FE-A51A95A8C472}
+		{F5D1F709-8B2A-48F5-854D-93F58778039C} = {A835BDCD-6325-4992-A03F-9675DB639F9E}
+		{010FF481-1488-44F9-BF03-9507D757139F} = {A835BDCD-6325-4992-A03F-9675DB639F9E}
+		{82EC5856-008D-4E5B-A259-C3BAAA728046} = {A835BDCD-6325-4992-A03F-9675DB639F9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD62955E-F08E-49AB-BBC7-8D5B4E990321}
