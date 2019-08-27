@@ -14,5 +14,6 @@ namespace TreinaWeb.Musica.Dominio
         public int Ano { get; set; }
         public string Obeservacoes { get; set; }
         public string Email { get; set; }
+        public virtual List<Musica> Musicas { get; set; }
     }
 }
