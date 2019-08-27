@@ -18,3 +18,4 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Servicos.Entity\ob
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Servicos.Entity\obj\Debug\TreinaWeb.Musica.Servicos.Entity.csproj.CopyComplete
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Servicos.Entity\obj\Debug\TreinaWeb.Musica.Servicos.Entity.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Servicos.Entity\obj\Debug\TreinaWeb.Musica.Servicos.Entity.pdb
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Servicos.Entity\obj\Debug\TreinaWeb.Musica.Servicos.Entity.Migrations.AdicaoMusic.resources

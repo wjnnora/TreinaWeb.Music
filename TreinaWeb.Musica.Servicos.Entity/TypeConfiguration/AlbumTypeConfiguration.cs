@@ -44,7 +44,10 @@ namespace TreinaWeb.Musica.Servicos.Entity.TypeConfiguration
 
         protected override void ConfigurarChavesEstrangeiras()
         {
-            //Ainda não foi implementado
+            //HasMany(p => p.Musicas)
+            //    .WithRequired(p => p.Album)
+            //    .HasForeignKey(fk => fk.IdAlbum);
+                
         }
 
         protected override void ConfigurarNomeTabela()

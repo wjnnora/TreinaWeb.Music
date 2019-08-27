@@ -85,3 +85,4 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.Entity.pdb
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.Entity.dll.config
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Repositorios.Comum.pdb
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\TreinaWeb.Musica.Repositorios.Entity.dll.config
