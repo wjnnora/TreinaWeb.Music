@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using TreinaWeb.Musica.Dominio;
 using TreinaWeb.Musica.Web.ViewModels.Album;
+using TreinaWeb.Musica.Web.ViewModels.Musica;
 
 namespace TreinaWeb.Musica.Web.AutoMapper
 {
@@ -20,6 +21,13 @@ namespace TreinaWeb.Musica.Web.AutoMapper
                     
                 cfg.CreateMap<Album, AlbumViewModel>();
                 cfg.CreateMap<AlbumViewModel, Album>();
+                cfg.CreateMap<Dominio.Musica, MusicaViewModel>();
+                cfg.CreateMap<MusicaViewModel, Dominio.Musica>();
+                cfg.CreateMap<Dominio.Musica, MusicaExibicaoViewModel>()
+                    .ForMember(p => p.NomeAlbum, opt =>
+                    {
+                        opt.MapFrom(src => src.Album.Nome);
+                    });
             });
         }
     }

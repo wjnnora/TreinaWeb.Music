@@ -138,12 +138,15 @@
     <Compile Include="AutoMapper\Map.cs" />
     <Compile Include="Controllers\AlbunsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MusicasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Album\AlbumExibicaoIndexViewModel.cs" />
     <Compile Include="ViewModels\Album\AlbumViewModel.cs" />
+    <Compile Include="ViewModels\Musica\MusicaExibicaoViewModel.cs" />
+    <Compile Include="ViewModels\Musica\MusicaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -187,6 +190,11 @@
     <Content Include="Views\Albuns\Details.cshtml" />
     <Content Include="Views\Albuns\Edit.cshtml" />
     <Content Include="Views\Albuns\Index.cshtml" />
+    <Content Include="Views\Musicas\Create.cshtml" />
+    <Content Include="Views\Musicas\Delete.cshtml" />
+    <Content Include="Views\Musicas\Details.cshtml" />
+    <Content Include="Views\Musicas\Edit.cshtml" />
+    <Content Include="Views\Musicas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

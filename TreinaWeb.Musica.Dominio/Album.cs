@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace TreinaWeb.Musica.Dominio
 {
     public class Album
-    {
-        //Classe POCO
+    {        
         public int  Id { get; set; }
         public string Nome { get; set; }
         public int Ano { get; set; }

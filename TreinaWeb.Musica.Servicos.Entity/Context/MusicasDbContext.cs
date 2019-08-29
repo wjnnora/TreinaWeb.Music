@@ -12,6 +12,7 @@ namespace TreinaWeb.Musica.Servicos.Entity.Context
     public class MusicasDbContext : DbContext
     {
         public DbSet<Album> Albuns { get; set; }
+        public DbSet<Dominio.Musica> Musicas { get; set; }
 
         public MusicasDbContext()
         {
