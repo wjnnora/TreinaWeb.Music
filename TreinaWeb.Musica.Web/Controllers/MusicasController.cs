@@ -29,6 +29,14 @@ namespace TreinaWeb.Musica.Web.Controllers
             return View(musicas);
         }
 
+        public ActionResult FiltrarPorNome(string pesquisa)
+        {
+            List<Dominio.Musica> musicas = repositorioMusicas.Selecionar().Where(p => p.Nome.Contains(pesquisa)).ToList();
+            List<MusicaExibicaoViewModel> viewMusica = Mapper.Map<List<Dominio.Musica>, List<MusicaExibicaoViewModel>>(musicas);
+
+            return Json(viewMusica, JsonRequestBehavior.AllowGet);
+        }
+
         // GET: Musicas/Details/5
         public ActionResult Details(long? id)
         {

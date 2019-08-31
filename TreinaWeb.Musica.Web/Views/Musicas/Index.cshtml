@@ -9,31 +9,81 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NomeAlbum)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeAlbum)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+<div class="row">
+    <div class="col-sm-10 col-lg-10 col-md-10">
+        <input type="text" id="pesquisaMusica" class="form-control" />
+    </div>
+    <div class="col-md-2 col-lg-2 col-sm-2">
+        <button id="botaoPesquisa">Pesquisar</button>
+    </div>
+</div>
+<br />
+<table class="table" id="tabelaMusica">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeAlbum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeAlbum)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#botaoPesquisa").click(function () {
+                var pesquisaMusica = $("#pesquisaMusica").val();
+
+                $.ajax({
+                    method: "GET",
+                    url: "/Musicas/FiltrarPorNome?pesquisa=" + pesquisaMusica,
+                    success: function (data) {
+                        $("#tabelaMusica tbody > tr").remove();
+                        $.each(data, function (i, album) {
+                            $("#tabelaMusica tbody").append(
+                                "<tr>" + 
+                                    "<td>" + album.Nome + "</td>" +
+                                "<td>" + album.NomeAlbum + "</td>" +
+                                "<td>" + 
+                                "<a href='/Musicas/Edit/" + album.Id + "'>Editar</a> | " + 
+                                "<a href='/Musicas/Details/" + album.Id + "'>Detalhes</a> |" + 
+                                "<a href='/Musicas/Delete/" + album.Id + "'>Excluir</a> " + 
+                                "</td>" + 
+                                "</tr>"
+
+                            );
+                        });
+                    },
+                    error: function (data) {
+                        alert("Houve um erro durante a busca.");
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
+}

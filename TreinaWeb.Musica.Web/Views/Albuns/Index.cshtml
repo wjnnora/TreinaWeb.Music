@@ -82,7 +82,6 @@
         $(document).ready(function () {
             $("#botaoPesquisar").click(function () {
                 var textoPesquisa = $("#pesquisaAlbum").val();
-                debugger
                 $.ajax({
                     method: "GET",
                     url: "/Albuns/FiltrarPorNome?pesquisa=" + textoPesquisa,
@@ -116,7 +115,7 @@
                         });
                     },
                     error: function (data) {
-                        alert("Houve um erro na busca.");
+                        alert("Houve um erro durante a busca.");
                     }
                 })
             });
