@@ -11,55 +11,119 @@
 <p>
     @Html.ActionLink("Criar Novo", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ano)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Obeservacoes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<div class="row">
+    <div class="col-md-10 col-sm-10 col-lg-10">
+        <input type="text" id="pesquisaAlbum" class="form-control" />
+    </div>
+    <div class="col-md-2 col-sm-2 col-lg-2">
+        <button id="botaoPesquisar">Pesquisar</button>
+    </div>
+</div>
+<br />
+<table class="table" id="tabelaAlbuns">
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ano)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Obeservacoes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                <div class="form-group">
-                    <button class="btn btn-success" value="Editar">
-                        <span class="glyphicon glyphicon-edit"></span>
-                        @Html.ActionLink("Editar", "Edit", new { id = item.Id})
-                    </button>
-                    <button class="btn btn-warning" value="Detalhes">
-                        <span class="glyphicon glyphicon-eye-open"></span>
-                        @Html.ActionLink("Detalhes", "Details", new { id = item.Id })
-                    </button>
-                    <button class="btn btn-danger" value="Deletar">
-                        <span class="glyphicon glyphicon-trash"></span>
-                        @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
-                    </button>
-                </div>
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Obeservacoes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
         </tr>
-    }
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ano)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Obeservacoes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-success" value="Editar">
+                            <span class="glyphicon glyphicon-edit"></span>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                        </button>
+                        <button class="btn btn-warning" value="Detalhes">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            @Html.ActionLink("Detalhes", "Details", new { id = item.Id })
+                        </button>
+                        <button class="btn btn-danger" value="Deletar">
+                            <span class="glyphicon glyphicon-trash"></span>
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
 
 </table>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#botaoPesquisar").click(function () {
+                var textoPesquisa = $("#pesquisaAlbum").val();
+                debugger
+                $.ajax({
+                    method: "GET",
+                    url: "/Albuns/FiltrarPorNome?pesquisa=" + textoPesquisa,
+                    success: function (data) {
+                        $("#tabelaAlbuns tbody > tr").remove();
+                        $.each(data, function (i, album) {
+                            $("#tabelaAlbuns tbody").append(
+                                "<tr>" +
+                                    "<td>" + album.Nome + "</td>" +
+                                    "<td>" + album.Ano + "</td>" +
+                                    "<td>" + album.Observacoes + "</td>" +
+                                    "<td>" + album.Email + "</td>" +
+                                    "<td>" +
+                                        "<div class='form-group'>" +
+                                            "<button class='btn btn-success' value='Editar'>" +
+                                            "<span class='glyphicon glyphicon-edit'></span>" +                                                
+                                                "<a href='/Albuns/Edit/" + album.Id + "'>Editar</a>" +                                                
+                                            "</button> " +
+                                            "<button class='btn btn-warning' value='Detalhes'>" +
+                                            "<span class='glyphicon glyphicon-eye-open'></span>" +                                                
+                                                "<a href='/Albuns/Details/" + album.Id + "'>Detalhes</a>" +                                                
+                                            "</button> " +
+                                            "<button class='btn btn-danger' value='Deletar'>" +
+                                            "<span class='glyphicon glyphicon-trash'></span>" +                                                
+                                                "<a href='/Albuns/Delete/" + album.Id + "'>Deletar</a>" +                                                
+                                            "</button>" +
+                                        "</div>" +
+                                    "</td>" + 
+                                "</tr>"
+                            );
+                        });
+                    },
+                    error: function (data) {
+                        alert("Houve um erro na busca.");
+                    }
+                })
+            });
+        });
+
+    </script>
+
+
+
+}
