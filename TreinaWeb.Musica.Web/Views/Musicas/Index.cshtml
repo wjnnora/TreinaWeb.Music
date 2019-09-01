@@ -14,7 +14,7 @@
         <input type="text" id="pesquisaMusica" class="form-control" />
     </div>
     <div class="col-md-2 col-lg-2 col-sm-2">
-        <button id="botaoPesquisa">Pesquisar</button>
+        <button id="botaoPesquisa" class="btn btn-default">Pesquisar</button>
     </div>
 </div>
 <br />
@@ -58,7 +58,7 @@
 
                 $.ajax({
                     method: "GET",
-                    url: "/Musicas/FiltrarPorNome?pesquisa=" + pesquisaMusica,
+                    url: "/Musicas/PesquisaPorNome/" + pesquisaMusica,
                     success: function (data) {
                         $("#tabelaMusica tbody > tr").remove();
                         $.each(data, function (i, album) {

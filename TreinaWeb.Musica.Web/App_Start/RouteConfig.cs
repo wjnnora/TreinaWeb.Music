@@ -14,6 +14,17 @@ namespace TreinaWeb.Musica.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "PesquisaAlbuns",
+                url: "Albuns/PesquisaPorNome/{pesquisa}",
+                defaults: new { controller = "Albuns", action = "FiltrarPorNome", pesquisa = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "PesquisaMusicas",
+                url: "Musicas/PesquisaPorNome/{pesquisa}",
+                defaults: new { controller = "Musicas", action = "FiltrarPorNome", pesquisa = UrlParameter.Optional }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

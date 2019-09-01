@@ -16,7 +16,7 @@
         <input type="text" id="pesquisaAlbum" class="form-control" />
     </div>
     <div class="col-md-2 col-sm-2 col-lg-2">
-        <button id="botaoPesquisar">Pesquisar</button>
+        <button id="botaoPesquisar" class="btn btn-default">Pesquisar</button>
     </div>
 </div>
 <br />
@@ -84,7 +84,7 @@
                 var textoPesquisa = $("#pesquisaAlbum").val();
                 $.ajax({
                     method: "GET",
-                    url: "/Albuns/FiltrarPorNome?pesquisa=" + textoPesquisa,
+                    url: "/Albuns/PesquisaPorNome/" + textoPesquisa,
                     success: function (data) {
                         $("#tabelaAlbuns tbody > tr").remove();
                         $.each(data, function (i, album) {
@@ -92,7 +92,7 @@
                                 "<tr>" +
                                     "<td>" + album.Nome + "</td>" +
                                     "<td>" + album.Ano + "</td>" +
-                                    "<td>" + album.Observacoes + "</td>" +
+                                    "<td>" + album.Obeservacoes + "</td>" +
                                     "<td>" + album.Email + "</td>" +
                                     "<td>" +
                                         "<div class='form-group'>" +

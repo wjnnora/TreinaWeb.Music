@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using TreinaWeb.Musica.Dominio;
 using TreinaWeb.Musica.Repositorios.Entity;
 using TreinaWeb.Musica.Servicos.Entity.Context;
+using TreinaWeb.Musica.Web.Filtros;
 using TreinaWeb.Musica.Web.ViewModels.Album;
 using TreinaWeb.Repositorios.Comum;
 
@@ -20,6 +21,7 @@ namespace TreinaWeb.Musica.Web.Controllers
         private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new MusicasDbContext());
 
         // GET: Albuns
+        [LogActionFilter]
         public ActionResult Index()
         {
             var album = Mapper.Map<List<Album>, List<AlbumExibicaoIndexViewModel>>(repositorioAlbuns.Selecionar()); 
