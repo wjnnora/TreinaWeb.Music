@@ -18,8 +18,8 @@ namespace TreinaWeb.Musica.Web.Controllers
 {
     public class MusicasController : Controller
     {
-        private readonly IRepositorioGenerico<Dominio.Musica, long> repositorioMusicas = new MusicaRepositorio(new MusicasDbContext());
-        private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new MusicasDbContext());
+        private readonly IRepositorioGenerico<Dominio.Musica, long> repositorioMusicas = new MusicaRepositorio(new IdentityMusicasDbContext());
+        private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new IdentityMusicasDbContext());
 
 
         // GET: Musicas

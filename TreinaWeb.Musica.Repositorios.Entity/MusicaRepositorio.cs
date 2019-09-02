@@ -12,7 +12,7 @@ namespace TreinaWeb.Musica.Repositorios.Entity
 {
     public class MusicaRepositorio : RepositorioGenericoEntity<Dominio.Musica, long>
     {
-        public MusicaRepositorio(MusicasDbContext contexto) : base(contexto) { }
+        public MusicaRepositorio(IdentityMusicasDbContext contexto) : base(contexto) { }
 
         public override List<Dominio.Musica> Selecionar()
         {

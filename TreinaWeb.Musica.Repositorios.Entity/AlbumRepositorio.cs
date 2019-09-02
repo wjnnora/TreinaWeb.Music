@@ -11,7 +11,7 @@ namespace TreinaWeb.Musica.Repositorios.Entity
 {
     public class AlbumRepositorio : RepositorioGenericoEntity<Album, int>
     {
-        public AlbumRepositorio(MusicasDbContext context) : base(context) { }
+        public AlbumRepositorio(IdentityMusicasDbContext context) : base(context) { }
 
         public override List<Album> Selecionar()
         {

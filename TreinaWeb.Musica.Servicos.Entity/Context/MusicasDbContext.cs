@@ -9,12 +9,12 @@ using TreinaWeb.Musica.Servicos.Entity.TypeConfiguration;
 
 namespace TreinaWeb.Musica.Servicos.Entity.Context
 {
-    public class MusicasDbContext : DbContext
+    public class IdentityMusicasDbContext : DbContext
     {
         public DbSet<Album> Albuns { get; set; }
         public DbSet<Dominio.Musica> Musicas { get; set; }
 
-        public MusicasDbContext()
+        public IdentityMusicasDbContext()
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
