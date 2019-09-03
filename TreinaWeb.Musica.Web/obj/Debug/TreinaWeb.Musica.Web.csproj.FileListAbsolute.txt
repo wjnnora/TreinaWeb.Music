@@ -90,3 +90,16 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Owin.dll
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.xml
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\Microsoft.Owin.Security.OAuth.xml

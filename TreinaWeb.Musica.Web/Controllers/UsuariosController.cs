@@ -44,5 +44,37 @@ namespace TreinaWeb.Musica.Web.Controllers
             }
             return View(viewModel);
         }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(UsuarioViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var userStore = new UserStore<IdentityUser>(new MusicasIdentityDbContext());
+                var userManager = new UserManager<IdentityUser>(userStore);
+                var user = userManager.Find(viewModel.Email, viewModel.Senha);
+                if (user == null)
+                {
+                    ModelState.AddModelError("identity_error", "Usuário e/ou senha incorreto(s)");
+                    return View(viewModel);
+                }
+                var authManager = HttpContext.GetOwinContext().Authentication;
+                var identity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authManager.SignIn(new Microsoft.Owin.Security.AuthenticationProperties()
+                {
+                    IsPersistent = false,
+                }, identity);
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(viewModel);
+        }
     }
 }
