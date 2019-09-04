@@ -16,6 +16,7 @@ using TreinaWeb.Repositorios.Comum;
 
 namespace TreinaWeb.Musica.Web.Controllers
 {
+    [Authorize]
     public class AlbunsController : Controller
     {
         private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new IdentityMusicasDbContext());
@@ -53,6 +54,7 @@ namespace TreinaWeb.Musica.Web.Controllers
         }
 
         // GET: Albuns/Create
+        [Authorize(Roles = "ADMINISTRADOR")]
         public ActionResult Create()
         {
             return View();
@@ -63,6 +65,7 @@ namespace TreinaWeb.Musica.Web.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "ADMINISTRADOR")]
         public ActionResult Create([Bind(Include = "Id,Nome,Ano,Obeservacoes,Email")] AlbumViewModel viewModel)
         {
             if (ModelState.IsValid)

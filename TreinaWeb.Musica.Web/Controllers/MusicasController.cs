@@ -16,6 +16,7 @@ using TreinaWeb.Repositorios.Comum;
 
 namespace TreinaWeb.Musica.Web.Controllers
 {
+    [Authorize]
     public class MusicasController : Controller
     {
         private readonly IRepositorioGenerico<Dominio.Musica, long> repositorioMusicas = new MusicaRepositorio(new IdentityMusicasDbContext());
@@ -53,6 +54,7 @@ namespace TreinaWeb.Musica.Web.Controllers
         }
 
         // GET: Musicas/Create
+        [Authorize(Roles = "ADMINISTRADOR")]
         public ActionResult Create()
         {
             List<AlbumExibicaoIndexViewModel> albuns = Mapper.Map<List<Album>, List<AlbumExibicaoIndexViewModel>>(repositorioAlbuns.Selecionar());
@@ -65,6 +67,7 @@ namespace TreinaWeb.Musica.Web.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "ADMINISTRADOR")]
         public ActionResult Create([Bind(Include = "Id,Nome,IdAlbum")] MusicaViewModel viewMusicas)
         {
             if (ModelState.IsValid)
