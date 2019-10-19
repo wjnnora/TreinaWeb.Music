@@ -27,7 +27,7 @@ namespace TreinaWeb.Musica.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Usuarios", action = "Login", id = UrlParameter.Optional }
             );
         }
     }

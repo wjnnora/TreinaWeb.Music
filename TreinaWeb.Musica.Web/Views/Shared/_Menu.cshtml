@@ -13,7 +13,7 @@
         <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
         @if (Request.IsAuthenticated)
         {
-            <li>@Html.ActionLink("Fazer LogOff", "LogOff", "Usuarios")</li>
+            <li class="text-right">@Html.ActionLink("Fazer LogOff", "LogOff", "Usuarios")</li>
             <li><a href="#">Seja Bem-Vindo, @User.Identity.Name</a></li>
         }
         else

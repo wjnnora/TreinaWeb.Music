@@ -72,7 +72,7 @@ namespace TreinaWeb.Musica.Web.Controllers
                     IsPersistent = false,
                 }, identity);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Albuns");
             }
 
             return View(viewModel);
@@ -84,7 +84,7 @@ namespace TreinaWeb.Musica.Web.Controllers
             var authManager = HttpContext.GetOwinContext().Authentication;
             authManager.SignOut();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Usuarios");
 
         }
     }
