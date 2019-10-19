@@ -9,7 +9,7 @@
 </div>
 <br />
 <p>
-    @Html.ActionLink("Criar Novo", "Create")
+    @Html.ActionLink("Criar", "Create")
 </p>
 <div class="row">
     <div class="col-md-10 col-sm-10 col-lg-10">
@@ -57,18 +57,15 @@
                 </td>
                 <td>
                     <div class="form-group">
-                        <button class="btn btn-success" value="Editar">
-                            <span class="glyphicon glyphicon-edit"></span>
-                            @Html.ActionLink("Editar", "Edit", new { id = item.Id })
-                        </button>
-                        <button class="btn btn-warning" value="Detalhes">
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                            @Html.ActionLink("Detalhes", "Details", new { id = item.Id })
-                        </button>
-                        <button class="btn btn-danger" value="Deletar">
-                            <span class="glyphicon glyphicon-trash"></span>
-                            @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
-                        </button>
+                        <a href="@Url.Action("Edit", "Albuns", new { id = item.Id })" class="btn btn-success">
+                            <span>Editar</span>
+                        </a>
+                        <a href="@Url.Action("Details", "Albuns", new { id = item.Id })" class="btn btn-warning">
+                            <span>Detalhes</span>
+                        </a>
+                        <a href="@Url.Action("Delete", "Albuns", new { id = item.Id })" class="btn btn-danger">
+                            <span>Deletar</span>
+                        </a>
                     </div>
                 </td>
             </tr>

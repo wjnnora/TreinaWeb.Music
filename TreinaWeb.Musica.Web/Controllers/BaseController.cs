@@ -31,18 +31,19 @@ namespace TreinaWeb.Musica.Web.Controllers
                 sb.Append("</td>");
                 sb.Append("<td>");
                 sb.Append("<div class='form-group'>");
-                sb.Append("<button class='btn btn-success' value='Editar'>");
-                sb.Append("<span class='glyphicon glyphicon-edit'></span>");
-                sb.Append("<a href='/Albuns/Edit/" + album.Id + "'>Editar</a>");
-                sb.Append("</button> ");
-                sb.Append("<button class='btn btn-warning' value='Detalhes'>");
-                sb.Append("<span class='glyphicon glyphicon-eye-open'></span>");
-                sb.Append("<a href='/Albuns/Details/" + album.Id + "'>Detalhes</a>");
-                sb.Append("</button> ");
-                sb.Append("<button class='btn btn-danger' value='Deletar'>");
-                sb.Append("<span class='glyphicon glyphicon-trash'></span>");
-                sb.Append("<a href='/Albuns/Delete/" + album.Id + "'>Deletar</a>");
-                sb.Append("</button>");
+                
+                sb.Append("<a href='/Albuns/Edit/" + album.Id + "' class='btn btn-success'>");
+                sb.Append("<span>Editar</span>");
+                sb.Append("</a> ");
+
+                sb.Append("<a href='/Albuns/Details/" + album.Id + "' class='btn btn-warning'>");
+                sb.Append("<span>Detalhes</span>");
+                sb.Append("</a> ");
+
+                sb.Append("<a href='/Albuns/Delete/" + album.Id + "' class='btn btn-danger'>");
+                sb.Append("<span>Deletar</span>");
+                sb.Append("</a>");
+                
                 sb.Append("</div>");
                 sb.Append("</td>");
                 sb.Append("</tr>");
