@@ -17,7 +17,7 @@ using TreinaWeb.Repositorios.Comum;
 namespace TreinaWeb.Musica.Web.Controllers
 {
     [Authorize]
-    public class AlbunsController : Controller
+    public class AlbunsController : BaseController
     {
         private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new IdentityMusicasDbContext());
 
@@ -25,16 +25,18 @@ namespace TreinaWeb.Musica.Web.Controllers
         [LogActionFilter]
         public ActionResult Index()
         {
-            var album = Mapper.Map<List<Album>, List<AlbumExibicaoIndexViewModel>>(repositorioAlbuns.Selecionar()); 
+            var album = Mapper.Map<List<Album>, List<AlbumExibicaoIndexViewModel>>(repositorioAlbuns.Selecionar()).OrderBy(x => x.Nome); 
             return View(album);
         }
 
-        public ActionResult FiltrarPorNome(string pesquisa)
+        public ContentResult FiltrarPorNome(string pesquisa)
         {
-            List<Album> albuns = repositorioAlbuns.Selecionar().Where(p => p.Nome.Contains(pesquisa)).ToList();
+            List<Album> albuns = repositorioAlbuns.Selecionar().Where(p => p.Nome.Contains(pesquisa)).OrderBy(x => x.Nome).ToList();
             List<AlbumExibicaoIndexViewModel> viewModel = Mapper.Map<List<Album>, List<AlbumExibicaoIndexViewModel>>(albuns);
 
-            return Json(viewModel, JsonRequestBehavior.AllowGet);
+            string conteudo = MontaResultadoPesquisaAlbum(viewModel);
+
+            return Content(conteudo);
         }
 
         // GET: Albuns/Details/5

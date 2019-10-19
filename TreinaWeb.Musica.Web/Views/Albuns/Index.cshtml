@@ -82,42 +82,48 @@
         $(document).ready(function () {
             $("#botaoPesquisar").click(function () {
                 var textoPesquisa = $("#pesquisaAlbum").val();
-                $.ajax({
-                    method: "GET",
-                    url: "/Albuns/PesquisaPorNome/" + textoPesquisa,
-                    success: function (data) {
-                        $("#tabelaAlbuns tbody > tr").remove();
-                        $.each(data, function (i, album) {
-                            $("#tabelaAlbuns tbody").append(
-                                "<tr>" +
-                                    "<td>" + album.Nome + "</td>" +
-                                    "<td>" + album.Ano + "</td>" +
-                                    "<td>" + album.Obeservacoes + "</td>" +
-                                    "<td>" + album.Email + "</td>" +
-                                    "<td>" +
-                                        "<div class='form-group'>" +
-                                            "<button class='btn btn-success' value='Editar'>" +
-                                            "<span class='glyphicon glyphicon-edit'></span>" +                                                
-                                                "<a href='/Albuns/Edit/" + album.Id + "'>Editar</a>" +                                                
-                                            "</button> " +
-                                            "<button class='btn btn-warning' value='Detalhes'>" +
-                                            "<span class='glyphicon glyphicon-eye-open'></span>" +                                                
-                                                "<a href='/Albuns/Details/" + album.Id + "'>Detalhes</a>" +                                                
-                                            "</button> " +
-                                            "<button class='btn btn-danger' value='Deletar'>" +
-                                            "<span class='glyphicon glyphicon-trash'></span>" +                                                
-                                                "<a href='/Albuns/Delete/" + album.Id + "'>Deletar</a>" +                                                
-                                            "</button>" +
-                                        "</div>" +
-                                    "</td>" + 
-                                "</tr>"
-                            );
-                        });
-                    },
-                    error: function (data) {
-                        alert("Houve um erro durante a busca.");
-                    }
-                })
+                if (textoPesquisa == "") {
+                    alert("O campo de pesquisa está vazio.");
+                }
+                else {
+                    $.ajax({
+                        method: "GET",
+                        url: "/Albuns/PesquisaPorNome/" + textoPesquisa,
+                        success: function (data) {
+                            $("#tabelaAlbuns tbody > tr").remove();
+                            $("#tabelaAlbuns tbody").html(data);
+                            //$.each(data, function (i, album) {
+                            //    $("#tabelaAlbuns tbody").append(
+                            //        "<tr>" +
+                            //        "<td>" + album.Nome + "</td>" +
+                            //        "<td>" + album.Ano + "</td>" +
+                            //        "<td>" + album.Obeservacoes + "</td>" +
+                            //        "<td>" + album.Email + "</td>" +
+                            //        "<td>" +
+                            //        "<div class='form-group'>" +
+                            //        "<button class='btn btn-success' value='Editar'>" +
+                            //        "<span class='glyphicon glyphicon-edit'></span>" +
+                            //        "<a href='/Albuns/Edit/" + album.Id + "'>Editar</a>" +
+                            //        "</button> " +
+                            //        "<button class='btn btn-warning' value='Detalhes'>" +
+                            //        "<span class='glyphicon glyphicon-eye-open'></span>" +
+                            //        "<a href='/Albuns/Details/" + album.Id + "'>Detalhes</a>" +
+                            //        "</button> " +
+                            //        "<button class='btn btn-danger' value='Deletar'>" +
+                            //        "<span class='glyphicon glyphicon-trash'></span>" +
+                            //        "<a href='/Albuns/Delete/" + album.Id + "'>Deletar</a>" +
+                            //        "</button>" +
+                            //        "</div>" +
+                            //        "</td>" +
+                            //        "</tr>"
+                            //    );
+                            //});
+                        },
+                        error: function (data) {
+                            alert("Houve um erro durante a busca.");
+                        }
+                    })
+                }
             });
         });
 
