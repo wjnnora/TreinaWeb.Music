@@ -11,7 +11,7 @@ namespace TreinaWeb.Musica.Web.ViewModels.Usuario
     {
         [Required(ErrorMessage = "O E-mail é obrigatório")]
         [MaxLength(30, ErrorMessage = "A quantidade máxima é de 30 caracteres")]
-        [Email(ErrorMessage = "O E-mail precisa ser um HOTMAIL")]
+        //[Email(ErrorMessage = "O E-mail precisa ser um HOTMAIL")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "A senha é obrigatória")]

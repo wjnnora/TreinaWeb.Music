@@ -29,7 +29,7 @@ namespace TreinaWeb.Musica.Web.ViewModels.Album
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "O E-mail é obrigatório")]
         [MaxLength(50, ErrorMessage = "O E-mail pode ter no máximo 50 caracteres")]
-        [Email(ErrorMessage = "O e-mail precisa ser Hotmail")]
+        //[Email(ErrorMessage = "O e-mail precisa ser Hotmail")]
         public string Email { get; set; }
     }
 }
