@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<TreinaWeb.Musica.Web.ViewModels.Musica.MusicaExibicaoViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Músicas";
 }
 
-<h2>Index</h2>
+<h2>Músicas</h2>
 
 <p>
     @Html.ActionLink("Criar", "Create")
@@ -66,7 +66,6 @@
         $(document).ready(function () {
             $("#botaoPesquisa").click(function () {
                 var pesquisaMusica = $("#pesquisaMusica").val();
-
                 $.ajax({
                     method: "GET",
                     url: "/Musicas/PesquisaPorNome/" + pesquisaMusica,
