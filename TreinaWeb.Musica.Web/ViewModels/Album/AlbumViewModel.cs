@@ -18,7 +18,7 @@ namespace TreinaWeb.Musica.Web.ViewModels.Album
         public string Nome { get; set; }
 
         [Display(Name = "Ano do Album")]
-        [Required(ErrorMessage = "O ano do album é obrigatório")]
+        [Required(ErrorMessage = "O ano do album é obrigatório.")]
         public int Ano { get; set; }
 
         [Display(Name = "Observações")]

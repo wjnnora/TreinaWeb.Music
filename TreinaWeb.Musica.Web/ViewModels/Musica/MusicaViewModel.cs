@@ -14,8 +14,8 @@ namespace TreinaWeb.Musica.Web.ViewModels.Musica
         [MaxLength(50, ErrorMessage = "O nome da música pode ter no máximo 50 caracteres.")]
         [Display(Name = "Nome da música")]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "Selecione um Album válido")]
-        [Display(Name = "Selecione o Album")]
+        [Required(ErrorMessage = "O nome do album é obrigatório.")]
+        [Display(Name = "Album")]
         public int IdAlbum { get; set; }
 
     }
