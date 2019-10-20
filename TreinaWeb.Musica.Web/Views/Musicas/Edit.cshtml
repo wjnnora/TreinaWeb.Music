@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Musica</h4>
         <hr />
@@ -18,7 +18,9 @@
         @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class = "control-label col-md-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </div>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
@@ -26,7 +28,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdAlbum, "IdAlbum", new { @class = "control-label col-md-2" })
+            <div class="control-label col-md-2">
+                @Html.DisplayNameFor(model => model.IdAlbum)
+            </div>
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.IdAlbum, (SelectList)ViewBag.DropDownAlbuns, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdAlbum, "", new { @class = "text-danger" })
@@ -35,15 +39,19 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <button class="btn btn-success" value="Salvar">
+                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                    Salvar
+                </button>
             </div>
         </div>
     </div>
 }
 
+<a href="@Url.Action("Index", "Musicas")" class="btn btn-warning">
+    <span><i class="glyphicon glyphicon-arrow-left"></i> Voltar</span>
+</a>
 <div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

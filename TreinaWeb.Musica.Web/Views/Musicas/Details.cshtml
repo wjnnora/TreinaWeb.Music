@@ -29,6 +29,10 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Edit", "Musicas", new { id = Model.Id })" class="btn btn-success">
+        <span><i class="glyphicon glyphicon-edit"></i> Editar</span>
+    </a>
+    <a href="@Url.Action("Index", "Musicas")" class="btn btn-warning">
+        <span><i class="glyphicon glyphicon-arrow-left"></i> Voltar</span>
+    </a>
 </p>

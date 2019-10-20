@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Criar", "Create")
 </p>
 <div class="row">
     <div class="col-sm-10 col-lg-10 col-md-10">
@@ -27,7 +27,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.NomeAlbum)
             </th>
-            <th></th>
+            <th>
+                Opções
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -44,13 +46,13 @@
 
                     <div class="form-group">
                         <a href="@Url.Action("Edit", "Musicas", new { id = item.Id })" class="btn btn-success">
-                            <span>Editar</span>
+                            <span><i class="glyphicon glyphicon-edit"></i> Editar</span>
                         </a>
                         <a href="@Url.Action("Details", "Musicas", new { id = item.Id })" class="btn btn-warning">
-                            <span>Detalhes</span>
+                            <span><i class="glyphicon glyphicon-eye-open"></i> Detalhes</span>
                         </a>
                         <a href="@Url.Action("Delete", "Musicas", new { id = item.Id })" class="btn btn-danger">
-                            <span>Deletar</span>
+                            <span><i class="glyphicon glyphicon-trash"></i> Deletar</span>
                         </a>
                     </div>
                 </td>

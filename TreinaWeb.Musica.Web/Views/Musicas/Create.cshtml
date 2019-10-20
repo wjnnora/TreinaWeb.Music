@@ -33,15 +33,18 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <button class="btn btn-success" value="Salvar">
+                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                    Salvar
+                </button>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+<a href="@Url.Action("Index", "Musicas")" class="btn btn-warning">
+    <span><i class="glyphicon glyphicon-arrow-left"></i> Voltar</span>
+</a>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

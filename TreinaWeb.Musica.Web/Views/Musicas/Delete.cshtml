@@ -6,7 +6,7 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja deletar esta música?</h3>
 <div>
     <h4>Musica</h4>
     <hr />
@@ -29,12 +29,17 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <button type="submit" class="btn btn-danger">
+                <span><i class="glyphicon glyphicon-trash"></i> Deletar</span>
+            </button>
+            <a href="@Url.Action("Index", "Musicas")" class="btn btn-warning">
+                <span><i class="glyphicon glyphicon-arrow-left"></i> Voltar</span>
+            </a>
         </div>
     }
 </div>
