@@ -66,30 +66,36 @@
         $(document).ready(function () {
             $("#botaoPesquisa").click(function () {
                 var pesquisaMusica = $("#pesquisaMusica").val();
-                $.ajax({
-                    method: "GET",
-                    url: "/Musicas/PesquisaPorNome/" + pesquisaMusica,
-                    success: function (data) {
-                        $("#tabelaMusica tbody > tr").remove();
-                        $.each(data, function (i, album) {
-                            $("#tabelaMusica tbody").append(
-                                "<tr>" + 
-                                    "<td>" + album.Nome + "</td>" +
-                                "<td>" + album.NomeAlbum + "</td>" +
-                                "<td>" + 
-                                "<a href='/Musicas/Edit/" + album.Id + "'>Editar</a> | " + 
-                                "<a href='/Musicas/Details/" + album.Id + "'>Detalhes</a> |" + 
-                                "<a href='/Musicas/Delete/" + album.Id + "'>Excluir</a> " + 
-                                "</td>" + 
-                                "</tr>"
+                if (pesquisaMusica == "") {
+                    alert("O campo de pesquisa está vazio.")
+                }
+                else {
+                    $.ajax({
+                        method: "GET",
+                        url: "/Musicas/PesquisaPorNome/" + pesquisaMusica,
+                        success: function (data) {
+                            $("#tabelaMusica tbody > tr").remove();
+                            $("#tabelaMusica tbody").html(data);
+                            //$.each(data, function (i, album) {
+                            //    $("#tabelaMusica tbody").append(
+                            //        "<tr>" +
+                            //        "<td>" + album.Nome + "</td>" +
+                            //        "<td>" + album.NomeAlbum + "</td>" +
+                            //        "<td>" +
+                            //        "<a href='/Musicas/Edit/" + album.Id + "'>Editar</a> | " +
+                            //        "<a href='/Musicas/Details/" + album.Id + "'>Detalhes</a> |" +
+                            //        "<a href='/Musicas/Delete/" + album.Id + "'>Excluir</a> " +
+                            //        "</td>" +
+                            //        "</tr>"
 
-                            );
-                        });
-                    },
-                    error: function (data) {
-                        alert("Houve um erro durante a busca.");
-                    }
-                });
+                            //    );
+                            //});
+                        },
+                        error: function (data) {
+                            alert("Houve um erro durante a busca.");
+                        }
+                    });
+                }
             });
 
 

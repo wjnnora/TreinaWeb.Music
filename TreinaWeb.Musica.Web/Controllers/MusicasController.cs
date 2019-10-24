@@ -17,7 +17,7 @@ using TreinaWeb.Repositorios.Comum;
 namespace TreinaWeb.Musica.Web.Controllers
 {
     [Authorize]
-    public class MusicasController : Controller
+    public class MusicasController : BaseController
     {
         private readonly IRepositorioGenerico<Dominio.Musica, long> repositorioMusicas = new MusicaRepositorio(new IdentityMusicasDbContext());
         private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new IdentityMusicasDbContext());
@@ -30,12 +30,14 @@ namespace TreinaWeb.Musica.Web.Controllers
             return View(musicas);
         }
 
-        public ActionResult FiltrarPorNome(string pesquisa)
+        public ContentResult FiltrarPorNome(string pesquisa)
         {
             List<Dominio.Musica> musicas = repositorioMusicas.Selecionar().Where(p => p.Nome.Contains(pesquisa)).ToList();
             List<MusicaExibicaoViewModel> viewMusica = Mapper.Map<List<Dominio.Musica>, List<MusicaExibicaoViewModel>>(musicas);
 
-            return Json(viewMusica, JsonRequestBehavior.AllowGet);
+            string conteudo = MontaResultadoPesquisaMusicas(viewMusica);
+
+            return Content(conteudo);
         }
 
         // GET: Musicas/Details/5
