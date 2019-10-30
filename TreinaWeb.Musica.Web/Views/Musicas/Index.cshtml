@@ -16,8 +16,11 @@
     <div class="col-md-2 col-lg-2 col-sm-2">
         <button id="botaoPesquisa" class="btn btn-default">Pesquisar</button>
     </div>
+    <div id="mensagem-pesquisa-vazia" class="bd-callout bd-callout-warning col-sm-10 col-lg-10 col-md-10" style="display: none;">
+        <span class="loading-page">O campo está vazio!!!</span>
+    </div>
 </div>
-<br />
+<div class="col-md-12 col-lg-12 col-sm-12" id="loading-page" style="display: none;"><span class="lds-dual-ring"></span></div>
 <table class="table" id="tabelaMusica">
     <thead>
         <tr>
@@ -43,7 +46,6 @@
                     @Html.DisplayFor(modelItem => item.NomeAlbum)
                 </td>
                 <td>
-
                     <div class="form-group">
                         <a href="@Url.Action("Edit", "Musicas", new { id = item.Id })" class="btn btn-success">
                             <span><i class="glyphicon glyphicon-edit"></i> Editar</span>
@@ -60,20 +62,23 @@
         }
     </tbody>
 </table>
-
 @section Scripts{
     <script type="text/javascript">
         $(document).ready(function () {
             $("#botaoPesquisa").click(function () {
                 var pesquisaMusica = $("#pesquisaMusica").val();
                 if (pesquisaMusica == "") {
-                    alert("O campo de pesquisa está vazio.")
+                    $("#mensagem-pesquisa-vazia").fadeIn();
+                    setTimeout(function () {
+                        $("#mensagem-pesquisa-vazia").fadeOut();
+                    }, 5000);
                 }
                 else {
                     $.ajax({
                         method: "GET",
                         url: "/Musicas/PesquisaPorNome/" + pesquisaMusica,
                         success: function (data) {
+                            $("#loading-page").hide();
                             $("#tabelaMusica tbody > tr").remove();
                             $("#tabelaMusica tbody").html(data);
                             //$.each(data, function (i, album) {
@@ -91,7 +96,11 @@
                             //    );
                             //});
                         },
+                        beforeSend: function () {
+                            $("#loading-page").show();
+                        },
                         error: function (data) {
+                            $("#loading-page").hide();
                             alert("Houve um erro durante a busca.");
                         }
                     });
