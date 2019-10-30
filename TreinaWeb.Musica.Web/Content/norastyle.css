@@ -1,0 +1,80 @@
+﻿.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+    .bd-callout h4 {
+        margin-top: 0;
+        margin-bottom: .25rem
+    }
+
+    .bd-callout p:last-child {
+        margin-bottom: 0
+    }
+
+    .bd-callout code {
+        border-radius: .25rem
+    }
+
+    .bd-callout + .bd-callout {
+        margin-top: -.25rem
+    }
+
+.bd-callout-info {
+    border-left-color: #5bc0de
+}
+
+    .bd-callout-info h4 {
+        color: #5bc0de
+    }
+
+.bd-callout-warning {
+    border-left-color: #f0ad4e
+}
+
+    .bd-callout-warning h4 {
+        color: #f0ad4e
+    }
+
+.bd-callout-danger {
+    border-left-color: #d9534f
+}
+
+    .bd-callout-danger h4 {
+        color: #d9534f
+    }
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 1% 40%;
+}
+
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 46px;
+        height: 46px;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid #dfc;
+        border-color: #000 transparent #f00 transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
