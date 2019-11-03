@@ -1,5 +1,0 @@
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum\bin\Debug\TreinaWeb.Repositorios.Comum.dll
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum\bin\Debug\TreinaWeb.Repositorios.Comum.pdb
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum\obj\Debug\TreinaWeb.Repositorios.Comum.csproj.CoreCompileInputs.cache
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum\obj\Debug\TreinaWeb.Repositorios.Comum.dll
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum\obj\Debug\TreinaWeb.Repositorios.Comum.pdb
