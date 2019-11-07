@@ -91,7 +91,7 @@
                 else {
                     $.ajax({
                         method: "GET",
-                        url: "/Albuns/PesquisaPorNome/" + textoPesquisa,
+                        url: getBaseUrl() + "/Albuns/PesquisaPorNome/" + textoPesquisa,
                         success: function (data) {
                             $("#loading-page").hide();
                             $("#tabelaAlbuns tbody > tr").remove();

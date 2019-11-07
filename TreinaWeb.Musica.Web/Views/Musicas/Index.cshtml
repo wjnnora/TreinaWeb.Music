@@ -76,7 +76,7 @@
                 else {
                     $.ajax({
                         method: "GET",
-                        url: "/Musicas/PesquisaPorNome/" + pesquisaMusica,
+                        url: getBaseUrl() + "/Musicas/PesquisaPorNome/" + pesquisaMusica,
                         success: function (data) {
                             $("#loading-page").hide();
                             $("#tabelaMusica tbody > tr").remove();
@@ -106,6 +106,8 @@
                     });
                 }
             });
+
+            
 
 
 

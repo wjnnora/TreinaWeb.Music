@@ -33,15 +33,15 @@ namespace TreinaWeb.Musica.Web.Controllers
                 sb.Append("<td>");
                 sb.Append("<div class='form-group'>");
                 
-                sb.Append("<a href='/Albuns/Edit/" + album.Id + "' class='btn btn-success'>");
+                sb.Append("<a href='./Edit/" + album.Id + "' class='btn btn-success'>");
                 sb.Append("<span>Editar</span>");
                 sb.Append("</a> ");
 
-                sb.Append("<a href='/Albuns/Details/" + album.Id + "' class='btn btn-warning'>");
+                sb.Append("<a href='./Details/" + album.Id + "' class='btn btn-warning'>");
                 sb.Append("<span>Detalhes</span>");
                 sb.Append("</a> ");
 
-                sb.Append("<a href='/Albuns/Delete/" + album.Id + "' class='btn btn-danger'>");
+                sb.Append("<a href='./Delete/" + album.Id + "' class='btn btn-danger'>");
                 sb.Append("<span>Deletar</span>");
                 sb.Append("</a>");
                 
