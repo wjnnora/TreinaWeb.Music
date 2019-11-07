@@ -7,7 +7,7 @@
 *.rsuser
 *.suo
 *.dll
-/TreinaWeb.Musica.Web/bin
+/bin
 *.user
 *.userosscache
 *.sln.docstates
