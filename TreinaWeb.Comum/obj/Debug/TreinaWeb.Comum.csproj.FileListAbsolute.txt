@@ -5,7 +5,6 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\bin\Debug\EntityFra
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\bin\Debug\EntityFramework.xml
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\obj\Debug\TreinaWeb.Comum.csprojAssemblyReference.cache
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\obj\Debug\TreinaWeb.Comum.csproj.CoreCompileInputs.cache
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\obj\Debug\TreinaWeb.Comum.csproj.CopyComplete
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Comum\obj\Debug\TreinaWeb.Comum.dll
