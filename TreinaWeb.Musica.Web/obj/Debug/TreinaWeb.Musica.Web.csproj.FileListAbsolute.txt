@@ -99,7 +99,6 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\pt-br\Syst
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\bin\pt-br\System.Web.WebPages.Razor.resources.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.csprojAssemblyReference.cache
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.csproj.CoreCompileInputs.cache
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.csproj.CopyComplete
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Web\obj\Debug\TreinaWeb.Musica.Web.pdb

@@ -19,7 +19,6 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entit
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\bin\Debug\TreinaWeb.Comum.dll.config
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\bin\Debug\TreinaWeb.Repositorios.Comum.pdb
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\obj\Debug\TreinaWeb.Musica.Repositorios.Entity.csprojAssemblyReference.cache
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\obj\Debug\TreinaWeb.Musica.Repositorios.Entity.csproj.CoreCompileInputs.cache
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\obj\Debug\TreinaWeb.Musica.Repositorios.Entity.csproj.CopyComplete
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\obj\Debug\TreinaWeb.Musica.Repositorios.Entity.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Repositorios.Entity\obj\Debug\TreinaWeb.Musica.Repositorios.Entity.pdb

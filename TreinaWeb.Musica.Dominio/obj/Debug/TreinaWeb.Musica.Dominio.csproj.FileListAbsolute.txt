@@ -1,6 +1,5 @@
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Dominio\bin\Debug\TreinaWeb.Musica.Dominio.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Dominio\bin\Debug\TreinaWeb.Musica.Dominio.pdb
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Dominio\obj\Debug\TreinaWeb.Musica.Dominio.csprojAssemblyReference.cache
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Dominio\obj\Debug\TreinaWeb.Musica.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Dominio\obj\Debug\TreinaWeb.Musica.Dominio.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Musica.Dominio\obj\Debug\TreinaWeb.Musica.Dominio.pdb

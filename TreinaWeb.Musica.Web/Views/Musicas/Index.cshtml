@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Músicas";
+    string value = System.Configuration.ConfigurationManager.AppSettings["caminhoVirtual"];
 }
 
 <h2>Músicas</h2>
@@ -66,6 +67,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("#botaoPesquisa").click(function () {
+                debugger
                 var pesquisaMusica = $("#pesquisaMusica").val();
                 if (pesquisaMusica == "") {
                     $("#mensagem-pesquisa-vazia").fadeIn();
@@ -76,7 +78,7 @@
                 else {
                     $.ajax({
                         method: "GET",
-                        url: getBaseUrl() + "/Musicas/PesquisaPorNome/" + pesquisaMusica,
+                        url: baseUrl + "/Musicas/PesquisaPorNome/" + pesquisaMusica,
                         success: function (data) {
                             $("#loading-page").hide();
                             $("#tabelaMusica tbody > tr").remove();
@@ -106,11 +108,6 @@
                     });
                 }
             });
-
-            
-
-
-
         });
     </script>
 }

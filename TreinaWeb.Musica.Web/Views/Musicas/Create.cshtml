@@ -1,16 +1,16 @@
 ﻿@model TreinaWeb.Musica.Web.ViewModels.Musica.MusicaViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Criar Música";
 }
 
-<h2>Create</h2>
+<h2>Formulário</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Musica</h4>
         <hr />
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdAlbum, "IdAlbum", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdAlbum, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.IdAlbum, (SelectList)ViewBag.DropDownAlbuns, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdAlbum, "", new { @class = "text-danger" })

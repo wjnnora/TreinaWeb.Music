@@ -8,7 +8,6 @@ C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\bin\Debug\EntityFramework.xml
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\obj\Debug\TreinaWeb.Repositorios.Comum.Entity.csprojAssemblyReference.cache
-C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\obj\Debug\TreinaWeb.Repositorios.Comum.Entity.csproj.CoreCompileInputs.cache
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\obj\Debug\TreinaWeb.Repositorios.Comum.Entity.csproj.CopyComplete
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\obj\Debug\TreinaWeb.Repositorios.Comum.Entity.dll
 C:\Users\welli\source\repos\TreinaWeb.Musica\TreinaWeb.Repositorios.Comum.Entity\obj\Debug\TreinaWeb.Repositorios.Comum.Entity.pdb

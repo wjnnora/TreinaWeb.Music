@@ -19,9 +19,17 @@ namespace TreinaWeb.Musica.Web.Controllers
     [Authorize]
     public class MusicasController : BaseController
     {
-        private readonly IRepositorioGenerico<Dominio.Musica, long> repositorioMusicas = new MusicaRepositorio(new IdentityMusicasDbContext());
-        private readonly IRepositorioGenerico<Album, int> repositorioAlbuns = new AlbumRepositorio(new IdentityMusicasDbContext());
+        private readonly IRepositorioGenerico<Dominio.Musica, long> repositorioMusicas;
+        private readonly IRepositorioGenerico<Album, int> repositorioAlbuns;
+        
+        #region Construtor()
+        public MusicasController()
+        {
+            repositorioMusicas = new MusicaRepositorio(new IdentityMusicasDbContext());
+            repositorioAlbuns = new AlbumRepositorio(new IdentityMusicasDbContext());
 
+        }
+        #endregion
 
         // GET: Musicas
         public ActionResult Index()
@@ -59,6 +67,7 @@ namespace TreinaWeb.Musica.Web.Controllers
         [Authorize(Roles = "ADMINISTRADOR")]
         public ActionResult Create()
         {
+            List<Dominio.Musica> musicas = repositorioMusicas.Selecionar();
             List<AlbumExibicaoIndexViewModel> albuns = Mapper.Map<List<Album>, List<AlbumExibicaoIndexViewModel>>(repositorioAlbuns.Selecionar());
             ViewBag.DropDownAlbuns = new SelectList(albuns, "Id", "Nome");
             return View();
