@@ -94,6 +94,8 @@ StyleCopReport.xml
 *.scc
 *.dll
 *.pdb
+*.txt
+*.suo
 
 # Chutzpah Test files
 _Chutzpah*
